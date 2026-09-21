@@ -1,5 +1,5 @@
-# FurtherOOP25
-Main sample code repo for Further OOP ECS658U Autumn 2025.
+# FurtherOOP26
+Main sample code repo for Further OOP ECS658U Autumn 2026.
 
 ## Repository setup
 
