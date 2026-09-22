@@ -17,6 +17,29 @@ By the end of the lab you should be able to:
 - use an interface through two substitutable implementations; and
 - distinguish a behavioural contract from a collection of test examples.
 
+### What is a behavioural contract?
+
+A behavioural contract states what a piece of software promises to do in
+terms that callers can observe. It may describe accepted inputs, returned
+values, exceptions, changes of state and, where relevant, performance. The
+contract says **what** must be true without prescribing **how** it is achieved.
+
+For example, the contract for `HelloWorld.getGreeting()` is simply that it
+returns the string `"Hello, World!"`. A test can call the method with one
+example and check that promise. The method body is the implementation: it may
+change without changing the contract.
+
+A slightly richer example is `IntList.nth(i)`. Its contract says that valid
+indexes are zero-based, the returned value is the element at index `i`, and an
+invalid index causes `IndexOutOfBoundsException`. An array-backed list and a
+linked list can satisfy that same contract with very different code.
+
+A Java interface is useful for declaring operation names and types, but those
+types rarely express the whole contract. Tests provide evidence that an
+implementation follows the contract, but a finite test suite cannot list every
+possible input and state. Throughout the module, treat the written contract as
+the requirement and the supplied tests as representative examples of it.
+
 ## 1. Repository and test check
 
 Open [`HelloWorld.java`](../../src/main/java/hello/HelloWorld.java) and run its
@@ -120,6 +143,12 @@ Both implementations must satisfy this contract:
 - `nth(i)` uses zero-based indexing and throws `IndexOutOfBoundsException` when
   `i < 0` or `i >= length()`.
 - Duplicate and negative integer values are permitted.
+- `equals` compares the complete ordered sequence of values, not object
+  identity. Any two `IntList` implementations with the same contents are
+  equal; an `IntList` is not equal to an object outside the `IntList`
+  abstraction.
+- Equal lists return equal `hashCode` values, independent of their backing
+  representation.
 
 Complete the `todo` sections in both classes. For this lab, concentrate on
 correctness and maintaining the invariants. The supplied array implementation
@@ -136,10 +165,11 @@ then find the two concrete test classes that extend it. Notice how
 `createList()` allows the same tests to exercise two representations.
 
 The supplied tests demonstrate representative behaviour but do not enumerate
-every valid input or state. Write at least three additional tests of your own.
-Choose them from different behavioural categories rather than making three
-minor variations of the same example. Give each test a name that describes the
-behaviour it checks.
+every valid input or state. Write at least three additional tests of your own
+under `src/studentTest/java`; see the
+[`studentTest` instructions](../../src/studentTest/README.md). Choose them from
+different behavioural categories rather than making three minor variations of
+the same example. Give each test a name that describes the behaviour it checks.
 
 Do not modify a supplied test merely to make an incorrect implementation pass.
 A public test suite passing is useful evidence, not proof that the full contract
@@ -147,7 +177,10 @@ has been met; assessment also uses held-out cases.
 
 **Checkpoint:** both implementations satisfy the public tests, your own tests
 exercise additional behaviour, and you can explain how each representation
-changes during `append`.
+changes during `append`. You should also be able to explain why overriding
+`equals` without a consistent `hashCode` would violate Java's object contract.
+
+Run your own suite independently with `./gradlew studentTest`.
 
 ## Reflection questions
 

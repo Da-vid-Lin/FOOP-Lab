@@ -31,11 +31,39 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
+val studentTestSourceSet = sourceSets.create("studentTest") {
+    java.srcDir("src/studentTest/java")
+    resources.srcDir("src/studentTest/resources")
+    compileClasspath += sourceSets.main.get().output
+    runtimeClasspath += output + compileClasspath
+}
+
+configurations[studentTestSourceSet.implementationConfigurationName]
+    .extendsFrom(configurations.testImplementation.get())
+configurations[studentTestSourceSet.runtimeOnlyConfigurationName]
+    .extendsFrom(configurations.testRuntimeOnly.get())
+
 tasks.test {
     useJUnitPlatform()
     testLogging {
         events("PASSED", "FAILED", "SKIPPED")
     }
+}
+
+val studentTest by tasks.registering(Test::class) {
+    group = LifecycleBasePlugin.VERIFICATION_GROUP
+    description = "Run tests written by the student in src/studentTest/java."
+    testClassesDirs = studentTestSourceSet.output.classesDirs
+    classpath = studentTestSourceSet.runtimeClasspath
+    useJUnitPlatform()
+    shouldRunAfter(tasks.test)
+    testLogging {
+        events("PASSED", "FAILED", "SKIPPED")
+    }
+}
+
+tasks.check {
+    dependsOn(studentTest)
 }
 
 tasks.register<JavaExec>("ckMetrics") {
@@ -53,4 +81,3 @@ tasks.register<JavaExec>("jdtComplexity") {
     classpath = sourceSets.main.get().runtimeClasspath
     mainClass.set("metrics.CyclomaticComplexityCalculator")
 }
-

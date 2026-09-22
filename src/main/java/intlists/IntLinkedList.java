@@ -39,6 +39,18 @@ public class IntLinkedList implements IntList {
         return false;
     }
 
+    @Override
+    public boolean equals(Object other) {
+        // todo: implement IntList value equality, independent of representation
+        return super.equals(other);
+    }
+
+    @Override
+    public int hashCode() {
+        // todo: return a hash consistent with equals
+        return super.hashCode();
+    }
+
     public static void main(String[] args) {
         IntLinkedList list = new IntLinkedList();
         list.append(1);

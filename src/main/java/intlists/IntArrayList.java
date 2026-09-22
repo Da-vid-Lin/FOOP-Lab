@@ -35,4 +35,16 @@ public class IntArrayList implements IntList {
         // todo: provide a working version
         return 0;
     }
+
+    @Override
+    public boolean equals(Object other) {
+        // todo: implement IntList value equality, independent of representation
+        return super.equals(other);
+    }
+
+    @Override
+    public int hashCode() {
+        // todo: return a hash consistent with equals
+        return super.hashCode();
+    }
 }

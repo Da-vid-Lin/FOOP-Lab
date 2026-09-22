@@ -53,6 +53,18 @@ public class GenericLinkedList<T> implements GenericList<T> {
     }
 
     @Override
+    public boolean equals(Object other) {
+        // todo: implement GenericList value equality, independent of representation
+        return super.equals(other);
+    }
+
+    @Override
+    public int hashCode() {
+        // todo: return an ordered, null-safe hash consistent with equals
+        return super.hashCode();
+    }
+
+    @Override
     public Iterator<T> iterator() {
         return new GenericLinkedListIterator<T>(this);
     }

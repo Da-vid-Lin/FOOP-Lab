@@ -16,5 +16,15 @@ public interface IntList {
      * @throws IndexOutOfBoundsException if index < 0 or index >= length()
      */
     int nth(int index);
-}
 
+    /**
+     * Compares this list by value with another IntList. Implementations are
+     * equal when they have the same length and integers in the same order.
+     */
+    @Override
+    boolean equals(Object other);
+
+    /** Returns an order-sensitive hash consistent with value equality. */
+    @Override
+    int hashCode();
+}

@@ -1,9 +1,8 @@
 # Lab 3 Notes – Performance Evaluation and Stat Summary
 
-Use and vary this template as required.  Your notes will
-not be used for summative assessment directly, but may feed
-in to your assignment one report, and may be used as
-an engagement check.
+Use and vary this template as required. Your notes are formative working
+material rather than a separately marked report, but selected evidence may
+feed into Assignment 1 and its mini-viva.
 
 **Name:**  
 **Student ID:**  
@@ -37,14 +36,12 @@ an engagement check.
 **nReps used:**  
 ...
 
-| Experiment Variant                      | Average Time (ns) | Comments |
-|-----------------------------------------|-------------------|----------|
-| Baseline (x++)                          |                   |          |
-| i as int                                |                   |          |
-| nReps as int                            |                   |          |
-| nReps ÷ 10                              |                   |          |
-| Empty loop body                         |                   |          |
-| Random number operation                 |                   |          |
+| Experiment variant | Prediction | Observed time | Explanation |
+|---|---|---:|---|
+| Baseline (`x++`) | | | |
+| Repetitions divided by 10 | | | |
+| Empty loop body | | | |
+| Random-number operation | | | |
 
 - **Observations / explanations:**  
   ...
@@ -62,7 +59,10 @@ an engagement check.
   - [ ] GenericLinkedListRecord
 
 - **Range of n:** ...
+- **Warm-up count:** ...
 - **Trials per n:** ...
+- **Quantity measured by one trial:** ...
+- **Summary statistic:** ...
 
 ### 3.2 Results
 
@@ -76,3 +76,15 @@ Attach your raw data or summarised tables here.
 - Trials per point:
 - Summary statistic and uncertainty shown:
 - Command used to regenerate the plot:
+
+## 5. RunningSummary
+
+- State retained by the implementation:
+- Why each single-value update is O(1):
+- Numerically stable variance method used:
+- Behaviour with insufficient data:
+
+## 6. Conclusions
+
+- Which observations support or contradict your complexity predictions?
+- What are the most important limitations of this experiment?

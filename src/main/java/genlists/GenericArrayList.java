@@ -37,6 +37,18 @@ public class GenericArrayList<T> implements GenericList<T> {
         return null;
     }
 
+    @Override
+    public boolean equals(Object other) {
+        // todo: implement GenericList value equality, independent of representation
+        return super.equals(other);
+    }
+
+    @Override
+    public int hashCode() {
+        // todo: return an ordered, null-safe hash consistent with equals
+        return super.hashCode();
+    }
+
     private static class GenericArrayListIterator<T> implements Iterator<T> {
         private int index;
         private final GenericArrayList<T> list;
