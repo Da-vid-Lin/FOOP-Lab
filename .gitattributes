@@ -1,0 +1,40 @@
+# === Ensure consistent line endings (LF) across OSes ===
+* text=auto eol=lf
+
+# === Java source files ===
+*.java text diff=java
+
+# === Kotlin (if you add it later) ===
+*.kt   text diff=java
+
+# === Gradle build files ===
+*.gradle text
+*.gradle.kts text
+
+# === Markdown / Docs ===
+*.md  text diff=markdown
+*.txt text
+
+# === Config / YAML / JSON ===
+*.yml  text
+*.yaml text
+*.json text
+
+# === Scripts ===
+*.sh   text eol=lf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+
+# === Ignore binary files for diffs ===
+*.class  binary
+*.jar    binary
+*.war    binary
+*.ear    binary
+*.zip    binary
+*.tar.gz binary
+*.rar    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.pdf    binary

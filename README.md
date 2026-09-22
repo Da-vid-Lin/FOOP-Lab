@@ -79,11 +79,14 @@ We encourage you to commit and push regularly.
 
 ## Labs
 
-This list will be added to as they are made ready for use:
+The labs build towards the two assignments. Behavioural requirements are stated
+in the lab text and API documentation; the supplied tests are examples rather
+than a complete specification. Assessment also uses held-out tests.
 
 * [Lab 1](labs/lab01/README.md): Hello world, object diagram, lists intro
 * [Lab 2](labs/lab02/README.md): Generic classes, type variables, iterators
-* [Lab 3](./labs/lab03/README.md): Performance evaluation and stats class
-* [Lab 4](./labs/lab04/README.md): Gson and Java Reflection
-* [Lab 5](./labs/lab05/README.md): Intro to Java Graphics
-* [Lab 6](./labs/lab06/README.md): Geometry and Shapes
+* [Lab 3](./labs/lab03/README.md): Performance evaluation, statistics and Kplotlib
+* [Lab 4](./labs/lab04/README.md): Serialization and Java reflection
+* [Lab 5](./labs/lab05/README.md): UML modelling, layout and Java graphics
+* [Lab 6](./labs/lab06/README.md): Geometry, graphics and Tangram
+* [Lab 7](./labs/lab07/README.md): Blocks Puzzle architecture and MVC
