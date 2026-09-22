@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" role="img" aria-labelledby="title description">
+  <title id="title">Comparison of pointSpan 1 and pointSpan 3</title>
+  <desc id="description">The same five sampled points joined consecutively on the left and with longer overlapping chords on the right.</desc>
+  <style>
+    .panel { fill: #f8fafc; stroke: #94a3b8; stroke-width: 2; }
+    .heading { font: 600 24px sans-serif; fill: #172033; text-anchor: middle; }
+    .caption { font: 17px sans-serif; fill: #475569; text-anchor: middle; }
+    .segment { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linecap: round; }
+    .guide { fill: none; stroke: #cbd5e1; stroke-width: 2; stroke-dasharray: 6 7; }
+    .point { fill: #f97316; stroke: white; stroke-width: 2; }
+    .label { font: 15px monospace; fill: #172033; }
+  </style>
+
+  <rect class="panel" x="15" y="15" width="420" height="330" rx="18"/>
+  <rect class="panel" x="465" y="15" width="420" height="330" rx="18"/>
+
+  <text class="heading" x="225" y="55">pointSpan = 1</text>
+  <text class="caption" x="225" y="84">Join each point to the previous point</text>
+  <polyline class="segment" points="75,265 145,155 225,205 305,110 380,175"/>
+
+  <text class="heading" x="675" y="55">pointSpan = 3</text>
+  <text class="caption" x="675" y="84">Join to a point up to three samples back</text>
+  <polyline class="guide" points="525,265 595,155 675,205 755,110 830,175"/>
+  <line class="segment" x1="525" y1="265" x2="595" y2="155"/>
+  <line class="segment" x1="525" y1="265" x2="675" y2="205"/>
+  <line class="segment" x1="525" y1="265" x2="755" y2="110"/>
+  <line class="segment" x1="595" y1="155" x2="830" y2="175"/>
+
+  <g>
+    <circle class="point" cx="75" cy="265" r="7"/><text class="label" x="55" y="292">p0</text>
+    <circle class="point" cx="145" cy="155" r="7"/><text class="label" x="125" y="142">p1</text>
+    <circle class="point" cx="225" cy="205" r="7"/><text class="label" x="211" y="232">p2</text>
+    <circle class="point" cx="305" cy="110" r="7"/><text class="label" x="291" y="97">p3</text>
+    <circle class="point" cx="380" cy="175" r="7"/><text class="label" x="365" y="202">p4</text>
+
+    <circle class="point" cx="525" cy="265" r="7"/><text class="label" x="505" y="292">p0</text>
+    <circle class="point" cx="595" cy="155" r="7"/><text class="label" x="575" y="142">p1</text>
+    <circle class="point" cx="675" cy="205" r="7"/><text class="label" x="661" y="232">p2</text>
+    <circle class="point" cx="755" cy="110" r="7"/><text class="label" x="741" y="97">p3</text>
+    <circle class="point" cx="830" cy="175" r="7"/><text class="label" x="815" y="202">p4</text>
+  </g>
+</svg>
