@@ -29,6 +29,5 @@ Swing applications must be created on the Event Dispatch Thread and close
 cleanly.
 
 Extend `DisplayUML` to draw class compartments and relationship connectors,
-then export a PNG example for Assignment 1. Avoid tests that depend on exact
-pixels, installed fonts or a desktop display.
-
+then export a PNG example that can be retained as possible coursework evidence.
+Avoid tests that depend on exact pixels, installed fonts or a desktop display.

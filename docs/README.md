@@ -1,9 +1,8 @@
 # Coursework documents
 
-Place non-code deliverables in the relevant `docs/labNN` or assignment folder.
-Keep generated plots and diagrams in an `images` subfolder and link them from
-the Markdown report using relative paths.
+Place lab deliverables in the relevant `docs/labNN` folder. Keep generated
+plots and diagrams in an `images` subfolder and use relative links.
 
-The Markdown assignment files are the canonical briefs and report templates.
-PDF copies, if supplied through QMplus, are generated from the same source.
-
+The 2026 assignment briefs have not yet been published. Requirements,
+percentages and report templates will be added here when they have been
+approved; do not infer them from lab exercises or previous-year assignments.

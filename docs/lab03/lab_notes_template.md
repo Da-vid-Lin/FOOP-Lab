@@ -2,7 +2,7 @@
 
 Use and vary this template as required. Your notes are formative working
 material rather than a separately marked report, but selected evidence may
-feed into Assignment 1 and its mini-viva.
+feed into later coursework and its mini-viva.
 
 **Name:**  
 **Student ID:**  

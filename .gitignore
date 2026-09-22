@@ -38,3 +38,6 @@ Thumbs.db
 
 # Local teaching-team migration/audit notes (not distributed to students)
 LOCAL_2026_MIGRATION_NOTES.md
+
+# Unpublished teaching-team assignment drafts
+LOCAL_ASSIGNMENT_*_DRAFT.md

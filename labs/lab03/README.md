@@ -23,7 +23,8 @@ By the end of the lab you should be able to:
 Record predictions, settings, results and short explanations in
 [`docs/lab03/lab_notes_template.md`](../../docs/lab03/lab_notes_template.md).
 The notes are formative working material rather than a separately marked
-report, but selected evidence may be useful in Assignment 1 and its mini-viva.
+report, but selected evidence may be useful in later coursework and its
+mini-viva.
 
 ## 1. Why a single timing is misleading
 

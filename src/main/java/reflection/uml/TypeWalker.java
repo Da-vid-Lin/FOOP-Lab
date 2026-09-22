@@ -8,7 +8,7 @@ import java.lang.reflect.WildcardType;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-/** Utility used by the assignment to find every concrete class nested in a Type. */
+/** Utility used by the reflection exercise to find concrete classes nested in a Type. */
 final class TypeWalker {
     private TypeWalker() { }
 
