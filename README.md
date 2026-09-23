@@ -24,8 +24,8 @@ In outline:
 Do not use a public fork or make your assessed work public. Others could copy
 your work, which may lead to an academic misconduct investigation.
 
-The exact commands, collaborator list, and IntelliJ instructions are in
-[Getting Started](labs/getting-started/README.md).
+The exact commands, QMUL GitHub credential setup, collaborator list, and
+IntelliJ instructions are in [Getting Started](labs/getting-started/README.md).
 
 ### Receiving course updates
 

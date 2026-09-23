@@ -14,9 +14,9 @@ This ensures your work can be built, tested, and assessed correctly.
 
   - Clone the public starter repository, create an empty **private** repository
     on QMUL GitHub, and configure it as `origin`, following the
-    [Getting Started instructions](getting-started/README.md). This is essential:
-    otherwise others could copy your work, which may lead to an academic
-    misconduct investigation.
+    [Getting Started instructions](getting-started/README.md), including the
+    QMUL GitHub credential setup. This is essential: otherwise others could
+    copy your work, which may lead to an academic misconduct investigation.
   - Add your Further OOP teaching staff as collaborators so we can access it for marking.
     - Simon Lucas: **eex250**
     - James Goodman: **eex859**
